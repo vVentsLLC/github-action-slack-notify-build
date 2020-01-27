@@ -40,6 +40,7 @@ const { buildSlackAttachments, formatChannelName } = require('./src/utils');
 
     core.setOutput('message_id', response.ts);
   } catch (error) {
+    console.log(error);
     core.setFailed(error.message);
   }
 })();
